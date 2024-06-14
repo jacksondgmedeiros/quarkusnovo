@@ -1,0 +1,62 @@
+JAVA QUARKUS
+
+tem que ter o java JRE e JDK, além do Maven instalado
+
+
+
+como criar um projeto com maven:
+
+acessei a página de criação e configurei os meus projetos de acordo com a instalação, como na máquina do senac só tinha o java 11, realizei as configurações e baixeo zip.
+
+https://code.quarkus.io/?g=org.jackson&a=quarkusnovo&j=11&S=io.quarkus.platform%3A3.2
+
+existe a opção de criar dentro do terminal com os comandos informados no link abaixo: mas não funcionou e criei o zip
+
+https://quarkus.io/version/3.2/guides/maven-tooling
+
+abri com o inteliij e executei no terminal o comando 
+
+./mvnw compile quarkus:dev
+
+compilou com a porta 8080, então se der um http://localhost:8080/hello já deve abrir normalmente
+
+
+adicionando dependências 
+	
+	pode acessar o repositorio do maven mvnrepository, procurar a sua depêndencia e adicionar no seu pom.xml
+
+ou pelo terminal 
+
+	lista as extensões instaladas
+		./mvnw quarkus:list-extensions
+
+	para adicionar uma dependência: o nome vai dentro de ""
+		./mvnw quarkus:add-extension -Dextensions="hibernate-validator,jdbc-h2,hibernate-orm-panache,resteasy-jsonb"
+
+
+	nesse primeiro projeto foi adicionado 
+
+	hibernate-validator, jdbc-h2,hibernate-orm-panache,resteasy-jsonb
+
+
+PROJETO INICIAL
+
+o Projeto do java quarkus social foi criado conforme curso da Udemy e para facilitar, coloquei comentários do que foi feito no código para facilitar o 
+entedimento sobre o framework.
+
+link do git-hub: https://github.com/jacksondgmedeiros/quarkusnovo
+
+
+
+
+INSTALANDO O BANCO DE DADOS POSTGRES
+	tudo next e a senha criada foi postgres com a porta 5434
+
+	para configurar o banco, no link https://quarkus.io/guides/datasource tem como configura cada um de acordo com o que vai usar, além disso,
+	foi adicionado a extensão jdbc-postgresql e adicionado as configurações dentro do applications.properties e para facilitar, tem uma pasta
+	db com os códigos gerados no banco de dados. 
+
+
+
+
+
